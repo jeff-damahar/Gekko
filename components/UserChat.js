@@ -7,7 +7,9 @@ const UserChat = ({ item }) => {
     return (
         <Pressable
             onPress={() =>
-                navigation.navigate("Messages")
+                navigation.navigate("Messages", {
+                    recepientId: item._id
+                })
             }
             style={{
                 flexDirection: 'row',
